@@ -1,0 +1,20 @@
+<Solution>
+
+    <!-- Solution Items -->
+    <!--
+    <Folder Name="/Solution Items/">
+        <File Path="Directory.Packages.props" />
+    </Folder>
+    -->
+
+    <!-- List of Projects -->
+    <!--
+    <Project Path="ADD_PROJECT_FILE_1_RELATIVE_PATH_HERE" />
+    <Project Path="ADD_PROJECT_FILE_2_RELATIVE_PATH_HERE">
+        <Configuration />
+        <Deploy />
+    </Project>
+    -->
+  <Project Path="2025.csproj" />
+
+</Solution>
