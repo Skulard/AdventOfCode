@@ -1,4 +1,7 @@
-﻿namespace _2025;
+﻿using System;
+using System.ComponentModel;
+
+namespace _2025;
 
 public class DayTwo
 {
@@ -10,7 +13,6 @@ public class DayTwo
         PartTwo();
     }
 
-    //44854383294
     void PartOne()
     {
         long total = 0;
@@ -43,30 +45,57 @@ public class DayTwo
         }
         Console.WriteLine($"Solution is: {total}");
     }
+
     void PartTwo()
     {
         //ID is invalid if sequence of digits repeated at least twice
         long count = 0;
-        List<string> ranges=allFiles.DayTwo.Split(",").ToList();
-        foreach(var range in ranges)
+        List<string> ranges=allFiles.ExampleDayTwo.Split(",").ToList();
+        codingGardingTwo(allFiles.DayTwo.Split(","));
+        codingGardingTwo(allFiles.DayTwo.Split(','), true);
+        //Thank you Coding Garden for the example. i learned lots
+        //https://www.youtube.com/watch?v=TD_FwAIEpqI
+    }
+
+    void codingGardingTwo(string[] rangeStrings, bool partTwo=false)
+    {
+        List<long> invalidIds = new();
+        rangeStrings.ToList().ForEach((range) =>
         {
-            List<string> items = range.Split("-").ToList();
-            long begin = Convert.ToInt64(items[0]);
-            long end = Convert.ToInt64(items[1]);
-            string beginstring = begin.ToString();
-            string endstring = end.ToString();
-            for(; begin <= end; begin++)
+            var (one, two) = range.Split('-') switch
             {
-                beginstring = begin.ToString();
-                var beginchar = beginstring.ToCharArray();
-                
-                if(beginstring.Length > 1)
-                {
-                    long a = Convert.ToInt64(beginstring.Substring(0, beginstring.Length / 2));
-                    long b = Convert.ToInt64(beginstring.Substring((beginstring.Length - (beginstring.Length / 2)), (beginstring.Length / 2)));
-                    
-                }
+                [var eins, var zwei] => (Convert.ToInt64(eins), Convert.ToInt64(zwei)),
+                _ => default
+            };
+            for (long i = one;i <= two; i++)
+            {
+                if (codingGardenIsInvalidId(i,partTwo))
+                    invalidIds.Add(i);
+            }
+        });
+        Console.WriteLine(invalidIds.Aggregate((s,v)=>s+v));
+    }
+    bool codingGardenIsInvalidId(long value, bool partTwo=false)
+    {
+        bool isInvalid = false;
+        var valueString = value.ToString();
+        var (left, right) = (valueString.Substring(0, valueString.Length / 2), valueString.Substring(valueString.Length / 2));
+
+        isInvalid= (left == right);
+
+        if (!isInvalid && partTwo)
+        {
+            int repeat = 1;
+            while(repeat * 2 < valueString.Length)
+            {
+                var partToRepeat = valueString.Substring(0, repeat);
+                var amountToRepeat = valueString.Length / repeat;
+                var repeated = string.Concat(Enumerable.Repeat(partToRepeat, amountToRepeat));
+                if (repeated == valueString)
+                    return true;
+                repeat++;
             }
         }
+        return isInvalid;
     }
 }

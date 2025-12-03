@@ -8,29 +8,23 @@
     "net10.0": []
   },
   "packageFolders": {
-    "C:\\Users\\kisling\\.nuget\\packages\\": {},
-    "C:\\Program Files\\DevExpress 24.1\\Components\\Offline Packages": {},
-    "C:\\Program Files\\DevExpress 25.1\\Components\\Offline Packages": {},
+    "C:\\Users\\T\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kisling\\source\\gitting\\AdventOfCode\\2025\\2025.csproj",
+      "projectUniqueName": "C:\\Users\\T\\source\\repos\\Gitting\\AdventOfCode\\2025\\2025.csproj",
       "projectName": "2025",
-      "projectPath": "C:\\Users\\kisling\\source\\gitting\\AdventOfCode\\2025\\2025.csproj",
-      "packagesPath": "C:\\Users\\kisling\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kisling\\source\\gitting\\AdventOfCode\\2025\\obj\\",
+      "projectPath": "C:\\Users\\T\\source\\repos\\Gitting\\AdventOfCode\\2025\\2025.csproj",
+      "packagesPath": "C:\\Users\\T\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\T\\source\\repos\\Gitting\\AdventOfCode\\2025\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files\\DevExpress 24.1\\Components\\Offline Packages",
-        "C:\\Program Files\\DevExpress 25.1\\Components\\Offline Packages",
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\kisling\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 24.1.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 25.1.config",
+        "C:\\Users\\T\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -39,11 +33,8 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\DevExpress 24.1\\Components\\System\\Components\\Packages": {},
-        "C:\\Program Files\\DevExpress 25.1\\Components\\System\\Components\\Packages": {},
         "C:\\Program Files\\dotnet\\library-packs": {},
-        "https://api.nuget.org/v3/index.json": {},
-        "https://nuget.devexpress.com/dA7XDnswpClPab2dCae2lLdUaOtJSP8HIcwnDuf8mnJd8iD5eo/api/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net10.0": {

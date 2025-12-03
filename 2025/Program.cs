@@ -5,6 +5,8 @@ class Program
     static void Main(string[] args)
     {
         Console.WriteLine("Hello, Advent Of Code!");
-        new DayTwo();
+        //new DayOne();
+        //new DayTwo();
+        new DayThree();
     }
 }
